@@ -1,28 +1,14 @@
 footer {
-  padding: 3.5rem var(--side-padding);
-  text-align: center;
+  display: flex;
+  position: relative;
+  margin: 0 auto 16px auto;
+  padding: 2.5rem var(--side-padding);
+  max-width: var(--max-content);
   color: var(--foreground-2);
 
   p {
     color: var(--foreground-3);
-  }
-
-  nav {
-    padding-top: 10px;
-    margin: 0 auto;
-    * + * {
-      margin-left: 1ex;
-    }
-  }
-
-  .github-link {
-    margin-left: 0.9ex;
-    vertical-align: -1px;
-    padding: 2px 0px 1px 4px;
-    border-radius: 50%;
-
-    &:hover {
-      text-decoration: underline rgba(0, 0, 0, 0);
-    }
+    padding: 0;
+    margin: 0 1em;
   }
 }
