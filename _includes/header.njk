@@ -5,38 +5,49 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <a href="#footer-links" class="skip-link">Skip to footer links</a>
 
-  <div class="left-side">
-    <h1 class="brand">
-      <a href="/">
-        Package Control
-      </a>
-    </h1>
-
-    <p class="tagline">The official <a href="https://www.sublimetext.com">Sublime Text</a> package manager.</p>
-  </div>
-
-  <div class="right-side">
-    {% if isPackagePage %}
-      {{ util.form(collections.packages | length, false) }}
-      {% inline_js 'static/_search_waiter.js' %}
-    {% endif %}
-
-    <nav>
-      {% if isPackagePage %}
-        <a class="search-toggle" href="/#search-field">
-          {{ util.icon('search') }}
-          <span class="screenreader-only">Search</span>
+  <div class="top">
+    <div class="left-side">
+      <h1 class="brand">
+        <a href="/">
+          Package Control
         </a>
+      </h1>
+
+      <p class="tagline">The official <a href="https://www.sublimetext.com">Sublime Text</a> package manager.</p>
+    </div>
+
+    <div class="right-side">
+      {% if isPackagePage %}
+        {{ util.form(collections.packages | length, false) }}
+        {% inline_js 'static/_search_waiter.js' %}
       {% endif %}
 
-      <button id="theme-toggle" aria-label="Toggle color scheme">
-        <span class="theme-toggle-dial" aria-hidden="true">
-          <span class="icon light">{{ util.icon('sun') }}</span>
-          <span class="icon dark">{{ util.icon('moon') }}</span>
-        </span>
-      </button>
+      <nav>
+        {% if isPackagePage %}
+          <a class="search-toggle" href="/#search-field">
+            {{ util.icon('search') }}
+            <span class="screenreader-only">Search</span>
+          </a>
+        {% endif %}
 
-    </nav>
+        <a class="large-nav" href="/installation">Installation</a>
+        <a class="large-nav" href="/installation">Docs</a>
+
+        <button id="theme-toggle" aria-label="Toggle color scheme">
+          <span class="theme-toggle-dial" aria-hidden="true">
+            <span class="icon light">{{ util.icon('sun') }}</span>
+            <span class="icon dark">{{ util.icon('moon') }}</span>
+          </span>
+        </button>
+
+      </nav>
+    </div>
   </div>
 
+  <div class="small-nav">
+    <nav>
+      <a href="/installation">Installation</a>
+      <a href="/installation">Docs</a>
+    </nav>
+  </div>
 </header>

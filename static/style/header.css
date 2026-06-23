@@ -1,5 +1,6 @@
 header {
   display: flex;
+  flex-direction: column;
   position: relative;
   margin: 0 auto 16px auto;
   padding: 10px var(--side-padding) 0 var(--side-padding);
@@ -19,6 +20,11 @@ header {
     padding: 0;
   }
 
+  .top {
+    display: flex;
+    flex-direction: row;
+  }
+
   .left-side {
     max-width: 78%;
   }
@@ -28,6 +34,24 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
+  }
+
+  .small-nav {
+    flex-basis: 100%;
+    font-size: 18px;
+
+    @media (min-width: 50rem) {
+      display: none;
+    }
+  }
+
+  .large-nav {
+    display: none;
+    font-size: 18px;
+
+    @media (min-width: 50rem) {
+      display: inline-block;
+    }
   }
 
   .brand {
@@ -67,7 +91,7 @@ header {
   nav {
     line-height: 47px;
     @media (max-width: 479px) {
-      line-height: 31px;
+      line-height: 40px;
     }
 
     > *:not(:last-child) {
