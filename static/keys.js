@@ -476,7 +476,7 @@ function handleGridNavigation(grid, currentCard, directions) {
   return false
 }
 
-const HOMEPAGE_SECTIONS = ['newest', 'recent', 'remarkable']
+const HOMEPAGE_SECTIONS = ['remarkable', 'newest', 'recent']
 
 /**
  * @typedef {HTMLElement} Card - Card element within grids.
