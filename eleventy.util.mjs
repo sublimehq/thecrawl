@@ -741,7 +741,7 @@ export function parseSublimeTextMax(selector) {
  * Find the last git commit hash.
  * Only executes in production builds to avoid overhead and issues when git is unavailable.
  */
-export const gitHash = isProd ? execSync('git rev-parse --short HEAD').toString().trim() : 'deadbead'
+export const gitHash = isProd ? (process.env.GIT_HASH || execSync('git rev-parse --short HEAD').toString().trim()) : 'deadbead'
 
 // Mutable crawler artifacts need a version for this exact build, independently
 // of the commit-based version used by source assets.
