@@ -373,7 +373,7 @@ const vendorModules = [
 
 export default async function (eleventyConfig) {
   const isProd = process.env.NODE_ENV === 'production' || process.env.ELEVENTY_ENV === 'production'
-  const prodOrigin = 'https://packages.sublimetext.io'
+  const prodOrigin = 'https://packages.sublimetext.com'
   const devOrigin = process.env.DEV_ORIGIN || 'http://localhost:8080'
   const siteOrigin = isProd ? prodOrigin : devOrigin
   const staticOutputDir = isProd ? 'static_' + util.gitHash : 'static'
